@@ -14,7 +14,7 @@ public class TesteEscrita {
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
 		
-		bw.write("Teste de escrita em arquivo");
+		bw.write("Teste de escrita em arquivo2");
 //		bw.newLine();
 		bw.newLine();
 		bw.write("Teste de escrita em arquivo segunda linha");
