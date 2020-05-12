@@ -11,7 +11,7 @@ public class TesteLeitura2 {
 		Scanner scanner = new Scanner(new File("contas.csv"));
 		while (scanner.hasNextLine()) {
 			String linha = scanner.nextLine();
-			System.out.println(linha);
+//			System.out.println(linha);
 
 			Scanner linhaScanner = new Scanner(linha);
 			linhaScanner.useLocale(Locale.US);
@@ -22,7 +22,9 @@ public class TesteLeitura2 {
 			String valor4 = linhaScanner.next();
 			double valor5 = linhaScanner.nextDouble();
 
-			System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
+//			String valorFormatado = String.format("%s - %04d-%08d, %20s: %05.2f %n", valor1, valor2, valor3, valor4, valor5);
+//			System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
+			System.out.printf("%s - %04d-%08d, %20s: %05.2f %n", valor1, valor2, valor3, valor4, valor5);
 
 //		String[] valores = linha.split(",");
 //		System.out.println(Arrays.toString(valores));
