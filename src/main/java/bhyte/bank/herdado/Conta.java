@@ -1,18 +1,21 @@
 package bhyte.bank.herdado;
-public class Conta {
 
-	private double saldo;
-	private int agencia;
-	private int numero;
-	private Cliente titular;
+import java.io.Serializable;
+
+public class Conta extends Object implements Comparable<Conta>, Serializable {
+
+	double saldo;
+	int agencia;
+	int numero;
+	transient Cliente titular;
 	private static int total = 0;
 
 	public Conta(int agencia, int numero) {
 		Conta.total++;
-		System.out.println("O total de contas Ã© " + Conta.total);
+		System.out.println("O total de contas criadas é : " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
-		this.saldo = 100;
+//		this.saldo = 100;
 		System.out.println("Estou criando uma conta" + this.numero);
 	}
 
@@ -76,6 +79,11 @@ public class Conta {
 
 	public static int getTotal() {
 		return Conta.total;
+	}
+
+	public int compareTo(Conta o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
