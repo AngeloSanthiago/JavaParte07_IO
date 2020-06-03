@@ -13,22 +13,22 @@ public class TesteUnicodeEEncoding {
 		System.out.println("Default charset (Encoding): " + defaultCharset.displayName());
 
 //		byte[] bytesString = s.getBytes();
-		byte[] bytesString = s.getBytes("windows-1252");
-		System.out.print("Quantidade de bytes: " + bytesString.length + " <=> windows-1252, ");
-		String sNovo = new String(bytesString, "windows-1252");
+		byte[] bytesArrayString = s.getBytes("windows-1252");
+		System.out.print("Quantidade de bytes: " + bytesArrayString.length + " <=> windows-1252, ");
+		String sNovo = new String(bytesArrayString, "windows-1252");
 		System.out.println(sNovo);
 
-		bytesString = s.getBytes("UTF-16");
-		System.out.print("Quantidade de bytes: " + bytesString.length + " <=> UTF-16, ");
+		bytesArrayString = s.getBytes("UTF-16");
+		System.out.print("Quantidade de bytes: " + bytesArrayString.length + " <=> UTF-16, ");
 //		sNovo = new String(bytesString, "windows-1252"); // Forçando erro
-		sNovo = new String(bytesString, "UTF-16"); 
+		sNovo = new String(bytesArrayString, "UTF-16"); 
 		System.out.println(sNovo);
 
-		bytesString = s.getBytes(StandardCharsets.US_ASCII);
+		bytesArrayString = s.getBytes(StandardCharsets.US_ASCII);
 //		System.out.println("Quantidade de bytes: "+ bytesString.length + " " + StandardCharsets.US_ASCII.displayName());
-		System.out.print("Quantidade de bytes: " + bytesString.length + " " + "<=> US-ASCII, ");
+		System.out.print("Quantidade de bytes: " + bytesArrayString.length + " " + "<=> US-ASCII, ");
 //		sNovo = new String(bytesString, "windows-1252"); // Forçando erro
-		sNovo = new String(bytesString, "US-ASCII"); 
+		sNovo = new String(bytesArrayString, "US-ASCII"); 
 		System.out.println(sNovo);
 
 //		bytesString = s.getBytes("UTF-8");

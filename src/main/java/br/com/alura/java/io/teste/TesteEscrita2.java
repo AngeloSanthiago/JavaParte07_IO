@@ -17,7 +17,7 @@ public class TesteEscrita2 {
 //		bw.write("\r\n");
 		bw.newLine();
 		bw.write("Teste de escrita em arquivo segunda linha");
-		bw.newLine();
+		bw.newLine();	
 //		bw.write("\r\n");
 		bw.write("Teste de escrita em arquivo terceira linha");
 		bw.newLine();
@@ -27,7 +27,6 @@ public class TesteEscrita2 {
 		bw.close();
 		
 		
-//		Fim Escrever somente com FileWriter
 //		Fluxo de saída de dados
 //		OutputStream fos = new FileOutputStream("lorem2.txt");
 //		Writer osw = new OutputStreamWriter(fos);
